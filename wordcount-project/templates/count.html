@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>COUNT</h1>
+    <h2><a href="{% url 'home' %}">Start again</a></h2>
+    <h2>There are {{ count }} words in your text</h2>
+    <h1>Your text:</h1>
+    {{ fulltext }}
+    <h1>Word Count:</h1>
+    {% for word, counttotal in sortedwords %}
+    {{ word }} - {{ counttotal }}
+    <br/>
+    {% endfor %}
+
+</body>
+</html>
